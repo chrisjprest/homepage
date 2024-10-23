@@ -1,0 +1,140 @@
+body{ /* body styling */
+    background-image: linear-gradient(purple,whitesmoke);
+}
+
+@font-face { /* adds pricedown black web font. reference: https://www.w3schools.com/css/css3_fonts.asp */
+    font-family: pricedown;
+    src: url(pricedown_black.otf);
+}
+
+#topHeader{
+    font-family: pricedown;
+    text-align: center;
+    font-size: 80px;
+    color: gold;
+    text-shadow: -2px -2px 0 black; /* adds shadow to header text. reference: https://stackoverflow.com/questions/4919076/outline-effect-to-text */
+}
+
+h1{
+    font-size: 30px;
+    font-family: pricedown;
+    text-align: center;
+    color: black;
+}
+
+#about{
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
+
+a{
+    text-align: center;
+    font-family: pricedown;
+    font-size: 35px;
+}
+
+a:link{
+    color: purple;
+}
+
+a:visited{
+    color: blue;
+}
+
+.collapsible { /*collapsible button script. reference:https://www.w3schools.com/howto/howto_js_collapsible.asp */
+    background-color: gold;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    width: 50%;
+    text-align: left;
+    outline: auto;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 32px;
+}
+  
+.active, .collapsible:hover {
+    background-color: goldenrod;
+}
+  
+.content {
+    padding: 0 5px;
+    font-size: 18px;
+    width: 47%;
+    display: none;
+    overflow: hidden;
+}
+
+.collapsible:after {
+    content: '▼';
+    font-size: 32px;
+    color: purple;
+    float: right;
+    margin-left: 5px;
+}
+  
+.active:after {
+    content: '▲';
+}
+
+table{
+    background-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.tableHead{
+    color: white;
+    background-color: purple;
+    padding: 5px;
+}
+
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: white;
+    outline: auto;
+}
+
+@keyframes player { /* player/ball animations. reference: https://www.w3schools.com/css/css3_animations.asp */
+    from{
+        left: 0%;
+    }
+    to{
+        left: 40%;
+    }
+}
+
+@keyframes ball {
+    from{
+        left:100%;
+    }
+    to{
+        left:40%;
+    }
+}
+
+#player{
+    position: relative;
+    bottom: 30%;
+    animation-name: player;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#ball{
+    position: relative;
+    bottom: 80%;
+    left: 100%;
+    animation-name: ball;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.nightMode{
+    position: relative;
+    bottom: 50%;
+    color: white;
+    background-color: purple;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

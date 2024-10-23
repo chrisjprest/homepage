@@ -1,0 +1,140 @@
+body{ /* body styling */
+    background-image: linear-gradient(black,rgb(65, 55, 0));
+}
+
+@font-face { /* adds pricedown black web font. reference: https://www.w3schools.com/css/css3_fonts.asp */
+    font-family: pricedown;
+    src: url(pricedown_black.otf);
+}
+
+#topHeader{
+    font-family: pricedown;
+    text-align: center;
+    font-size: 80px;
+    color: whitesmoke;
+    text-shadow: -2px -2px 0 goldenrod; /* adds shadow to header text. reference: https://stackoverflow.com/questions/4919076/outline-effect-to-text */
+}
+
+h1{
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: whitesmoke;
+}
+
+#about{
+    font-size: 18px;
+    font-family: pricedown;
+    color: whitesmoke;
+}
+
+a{
+    text-align: center;
+    font-family: pricedown;
+    font-size: 35px;
+}
+
+a:link{
+    color: purple;
+}
+
+a:visited{
+    color: blue;
+}
+
+.collapsible { /*collapsible button script. reference:https://www.w3schools.com/howto/howto_js_collapsible.asp */
+    background-color: purple;
+    color: black;
+    cursor: pointer;
+    padding: 10px;
+    width: 50%;
+    text-align: left;
+    outline: auto;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 32px;
+}
+  
+.active, .collapsible:hover {
+    background-color: rgb(90, 0, 90);
+}
+  
+.content {
+    padding: 0 5px;
+    font-size: 18px;
+    width: 47%;
+    display: none;
+    overflow: hidden;
+}
+
+.collapsible:after {
+    content: '▼';
+    font-size: 32px;
+    color: whitesmoke;
+    float: right;
+    margin-left: 5px;
+}
+  
+.active:after {
+    content: '▲';
+}
+
+table{
+    background-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.tableHead{
+    color: whitesmoke;
+    background-color: black;
+    padding: 5px;
+}
+
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: whitesmoke;
+    background-color: black;
+    outline: auto;
+}
+
+@keyframes player { /* player/ball animations. reference: https://www.w3schools.com/css/css3_animations.asp */
+    from{
+        left: 0%;
+    }
+    to{
+        left: 40%;
+    }
+}
+
+@keyframes ball {
+    from{
+        left:100%;
+    }
+    to{
+        left:40%;
+    }
+}
+
+#player{
+    position: relative;
+    bottom: 30%;
+    animation-name: player;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#ball{
+    position: relative;
+    bottom: 80%;
+    left: 100%;
+    animation-name: ball;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.nightMode{
+    position: relative;
+    bottom: 50%;
+    background-color: gold;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
